@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4f2">
+  <meta name="description" content="COTE Library — your personal Classroom of the Elite reading library.">
+  <title>COTE Library — Classroom of the Elite</title>
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/library.css">
+  <link rel="stylesheet" href="./css/reader.css">
+  <script defer src="./js/volumes.js"></script>
+  <script defer src="./js/files.js"></script>
+  <script defer src="./js/library.js"></script>
+  <script defer src="./js/reader.js"></script>
+  <script defer src="./js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <div class="header-inner page-shell">
+      <a class="brand" href="./index.html" data-action="home" aria-label="COTE Library home">
+        <img class="brand-mark" src="./assets/icons/cote-logo.svg" alt="" width="42" height="42">
+        <span class="brand-copy"><strong>COTE <span>LIBRARY</span></strong><small>THE CLASSROOM ARCHIVE</small></span>
+      </a>
+      <button class="icon-button menu-toggle" type="button" data-action="mobile-menu" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <button type="button" class="nav-link active" data-action="home">Home</button>
+        <button type="button" class="nav-link" data-action="library">Library</button>
+        <button type="button" class="theme-toggle" data-action="theme" aria-label="Switch to dark theme" title="Switch theme">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 15.4A8.5 8.5 0 0 1 8.6 3.4 8.5 8.5 0 1 0 20.6 15.4Z"/></svg>
+          <span class="theme-label">Dark mode</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="site-main">
+    <section class="view home-view" id="home-view" aria-labelledby="hero-title">
+      <div class="hero-wrap">
+        <div class="hero page-shell">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> A PERSONAL READING ARCHIVE</p>
+            <h1 id="hero-title">CLASSROOM<br>OF THE <span>ELITE</span></h1>
+            <p class="hero-tagline">Enter a school where intelligence is everything.</p>
+            <p class="hero-description">A quiet place for your collection. Choose a year, open a volume, and return to the story at your own pace.</p>
+            <button type="button" class="button button-primary hero-cta" data-action="library">Explore Library <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="hero-art-frame"><div class="hero-art-inner"><span class="art-number">01</span><span class="art-vertical">ABILITY IS EVERYTHING</span><span class="art-lines"></span><span class="art-stamp">C.L.</span></div></div>
+            <div class="hero-art-caption"><span>PRIVATE COLLECTION</span><span>EST. 2026</span></div>
+          </div>
+          <div class="hero-index" aria-hidden="true"><span>01 / 04</span><span class="hero-index-rule"></span><span>THE ARCHIVE</span></div>
+        </div>
+      </div>
+
+      <section class="section-block collection-section page-shell" aria-labelledby="collection-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">YOUR COLLECTION</p><h2 id="collection-title">Choose your classroom</h2></div>
+          <button type="button" class="text-link" data-action="library">View all volumes <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="year-grid" id="home-year-grid">
+          <article class="year-card year-card-loading"><div class="year-card-skeleton"></div><span>Loading collection…</span></article>
+        </div>
+      </section>
+
+      <section class="reading-note">
+        <div class="page-shell reading-note-inner">
+          <div class="note-symbol" aria-hidden="true">“</div>
+          <div><p class="eyebrow">READ AT YOUR OWN PACE</p><p class="note-quote">A considered space for stories, ideas, and quiet focus.</p></div>
+          <button type="button" class="button button-outline" data-action="library">Open the library <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+    </section>
+
+    <section class="view library-view" id="library-view" aria-labelledby="library-title" hidden>
+      <div class="page-shell library-shell">
+        <div class="page-intro">
+          <div><p class="eyebrow">THE COLLECTION</p><h1 id="library-title">The Library</h1><p class="intro-copy">Browse your configured volumes. Your original PDF files stay in their folders.</p></div>
+          <button class="button button-outline" type="button" data-action="home"><span aria-hidden="true">←</span> Back to Home</button>
+        </div>
+        <div class="library-controls">
+          <div class="filter-tabs" id="library-tabs" role="group" aria-label="Filter by year">
+            <button type="button" class="filter-tab active" data-filter="ALL" aria-pressed="true">All volumes</button>
+            <button type="button" class="filter-tab" data-filter="Y1" aria-pressed="false">Year 1</button>
+            <button type="button" class="filter-tab" data-filter="Y2" aria-pressed="false">Year 2</button>
+            <button type="button" class="filter-tab" data-filter="Y3" aria-pressed="false">Year 3</button>
+            <button type="button" class="filter-tab" data-filter="SPECIAL" aria-pressed="false">Volume 0</button>
+          </div>
+          <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search volumes</span><input id="volume-search" type="search" placeholder="Search volumes…" autocomplete="off"><kbd>⌕</kbd></label>
+        </div>
+        <div class="results-meta"><p id="results-summary" aria-live="polite">Loading configured volumes…</p><span class="results-rule"></span></div>
+        <div class="volume-grid" id="volume-grid" aria-live="polite"></div>
+        <div class="library-help"><span class="help-mark" aria-hidden="true">i</span><p>Missing files are shown as unavailable. Add your PDFs to the matching folder and update <code>js/volumes.js</code> if the filename differs.</p></div>
+      </div>
+    </section>
+
+    <section class="view reader-view" id="reader-view" aria-label="PDF reader" hidden>
+      <div id="reader-root"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="page-shell footer-main">
+      <div class="footer-brand"><a class="footer-logo" href="./index.html" data-action="home"><img src="./assets/icons/cote-logo.svg" alt="" width="38" height="38"><span>COTE <b>LIBRARY</b></span></a><p>Your personal Classroom of the Elite reading library.</p></div>
+      <div class="footer-message"><span class="footer-overline">A PERSONAL ARCHIVE</span><p>Keep your place.<br>Return when you're ready.</p></div>
+    </div>
+    <div class="page-shell footer-bottom"><p>© 2026 COTE Library. All rights reserved.</p><p>Fan-made project. Not affiliated with the official creators or publisher.</p></div>
+  </footer>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="noscript-message">COTE Library requires JavaScript to display the collection and read PDFs.</div></noscript>
+</body>
+</html>
